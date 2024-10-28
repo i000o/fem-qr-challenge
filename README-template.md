@@ -1,6 +1,6 @@
 # Frontend Mentor - QR code component solution
 
-This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -19,17 +19,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Overview
 
+This challenge asked me to recreate a QR code for Desktop and Mobile.
+
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./FireShot%20Capture%20001%20-%20Frontend%20Mentor%20-%20QR%20code%20component%20-%20.png)
 
 ### Links
 
@@ -38,20 +32,23 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+First, I noted down all the elements I could see in the design including an image, h1, h2 and section and organised them into HTML tags.
+Then, I inserted these into the HTML body content.
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- CSS Grid and Flex
+- Desktop-first workflow
 
 ### What I learned
+
+The main thing I learned had to do with Grid layouts in CSS. For a long time, I couldn't get my alignment right because I had defined the grid with a repeat function that used fr units. This meant that the browser split my grid into the available space, meaning it wasn't a fixed grid and would change based on the viewport, which made aligning items difficult. Once I measured that each track should be 64px in width, the grid was able to be centre aligned both along main and cross axis so that I could then begin optimising for mobile. To centre align, I used align-content and justify-content. I had tried margin: auto but found this not to be helpful due to its consideration of 'available space'. I learnt the importance of using align-content, not align-items and respectively, with justify. I'd like to practice grid layouts a lot more because I find them incredibly useful as a visual person.
+
+At first, I struggled with writing the media queries for responsive design. It had been a while since I had gone over it. I took a desktop-first approach and used max-width values. I used Chrome dev tools to help me visualise. I wanted the QR code to stay in position down to mobile at 375px, but I had to adjust the grid-column values to ensure that the grid sized down proportionally so the .card stayed in the same place as the viewport width reduced. Something that clicked into place was that before, I was applying width values according to the viewport to the grid container, because I wanted it to take up the space rather than shrink. But, I learnt that if I used width: 100% instead, this snapping into place would stop happening when I sized the viewport down. I don't quite understand why this is, but logically, it makes sense that I should be able to just tell the browser that the grid should take up all the viewport space rather than remain stuck at its max width setting. I guess this meant that any value below the max width and the grid would collapse back to its unresponsive design and shrink smaller and smaller, unhelpfully.
+
+I enjoyed getting into a nice flow trialling different solutions and speedily googling questions I had along the way to piece together my understand of what I did and did not need in my code. It was fun.
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
@@ -60,15 +57,17 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  console.log("🎉");
+};
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.

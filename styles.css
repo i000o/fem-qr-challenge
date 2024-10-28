@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* BOX MODEL FIX */ 
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    font-family: "outfit", sans-serif;
+    background-color: rgb(213,225,239);
+}
+
+.container {
+    display: grid; 
+    grid-template-columns: repeat(12, 64px); /* I defined the width of the tracks, instead of using 1fr previously */ 
+    gap: 24px 24px;
+    align-content: center; /* align to centre across Y axis */ 
+    justify-content: center; /* aligns to centre across X axis */ 
+    width: 1440px;
+    height: 960px;
+}
+
+.card {
+    height: 499px;
+    width: 320px;
+    background-color: #FFFFFF;
+    grid-column: 5 / span 4;
+    padding: 16px;
+    border-radius: 16px; /* rounds edges of box */ 
+}
+
+img {
+    height: 288px; 
+    width: 288px;
+}
+
+h1 {  
+    font-weight: bold;
+    font-size: 22px; 
+    line-height: 120%; 
+    color: rgb(31,49,79)
+    width: 256px; 
+    height: 52px;
+    text-align: center;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 15px; 
+    line-height: 140%; 
+    color: rgb(104,119,141);
+    width: 256px; 
+    height: 63px;
+    text-align: center;
+    margin: auto;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    margin: 20px; 
+}
+
+/* Media queries must be in descending order */ 
+
+
+@media screen and (max-width: 1440px) {
+    .container {
+        grid-template-columns: repeat(12, 64px);
+        width: 100%;
+    }
+
+    .card {
+        grid-column: 5 / span 4;
+    }
+}
+
+@media screen and (max-width: 1024px) { 
+    .container {
+        grid-template-columns: repeat(12, 64px);
+        width: 100%;
+    }
+
+    .card {
+        grid-column: 5 / span 4;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(10, 64px);
+        width: 100%;
+
+    }
+
+    .card {
+        grid-column: 4 / span 4;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        grid-template-columns: repeat(6, 64px);
+        width: 100%;
+
+    }
+
+    .card {
+        grid-column: 2 / span 4; 
+    }} 
+
+@media screen and (max-width: 375px) {
+    .container {
+        grid-template-columns: repeat(4, 64px);
+        width: 100%;
+
+    }
+
+    .card {
+        grid-column: 1 / span 4; 
+    }
+}
+
