@@ -78,6 +78,10 @@ textarea:not([rows]) {
 
 /* END OF RESET */ 
 
+h1 {
+    display: none;
+}
+
 body {
     display: flex;
     flex-direction: column;
