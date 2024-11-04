@@ -1,62 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-/* BOX MODEL FIX */ 
+/* RESET */ 
 
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
 html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* END OF RESET */ 
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100svh;
+    gap: 2rem;
     font-family: "outfit", sans-serif;
     background-color: rgb(213,225,239);
     padding: 16px;
     text-align: center;
 }
 
-.container {
-    display: grid; 
-    grid-template-columns: repeat(12, 64px); /* I defined the width of the tracks, instead of using 1fr previously */ 
-    gap: 24px 24px;
-    align-content: center; /* align to centre across Y axis */ 
-    justify-content: center; /* aligns to centre across X axis */ 
-    width: 1440px;
-    height: 960px;
-}
-
 .card {
-    height: 499px;
     max-width: 20rem;
     background-color: #FFFFFF;
-    grid-column: 5 / span 4;
     padding: 16px;
     border-radius: 16px; /* rounds edges of box */ 
 }
 
 img {
-    height: 288px; 
-    width: 288px;
+    display: block;
+    height: auto; 
+    max-width: 100%;
 }
 
 h2 {  
     font-weight: bold;
-    font-size: 22px; /* font-size must be in rem not px */ 
+    font-size: 1.4rem;
     line-height: 120%; 
-    color: rgb(31,49,79)
-    width: 256px; 
-    height: 52px;
+    color: rgb(31,49,79);
+    padding: 10px;
 }
 
 p {
     font-weight: normal;
-    font-size: 15px; 
+    font-size: 1rem; 
     line-height: 140%; 
     color: rgb(104,119,141);
-    width: 256px; 
-    height: 63px;
-    margin: auto;
+    margin: 10px;
+    padding: 0 10px 10px 10px;
 }
 
 footer {
@@ -64,64 +126,3 @@ footer {
     justify-content: center;
     margin: 20px; 
 }
-
-/* Media queries must be in descending order */ 
-
-
-@media screen and (max-width: 1440px) {
-    .container {
-        grid-template-columns: repeat(12, 64px);
-        width: 100%;
-    }
-
-    .card {
-        grid-column: 5 / span 4;
-    }
-}
-
-@media screen and (max-width: 1024px) { 
-    .container {
-        grid-template-columns: repeat(12, 64px);
-        width: 100%;
-    }
-
-    .card {
-        grid-column: 5 / span 4;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container {
-        grid-template-columns: repeat(10, 64px);
-        width: 100%;
-
-    }
-
-    .card {
-        grid-column: 4 / span 4;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .container {
-        grid-template-columns: repeat(6, 64px);
-        width: 100%;
-
-    }
-
-    .card {
-        grid-column: 2 / span 4; 
-    }} 
-
-@media screen and (max-width: 375px) {
-    .container {
-        grid-template-columns: repeat(4, 64px);
-        width: 100%;
-
-    }
-
-    .card {
-        grid-column: 1 / span 4; 
-    }
-}
-
