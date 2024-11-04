@@ -12,6 +12,8 @@ html {
 body {
     font-family: "outfit", sans-serif;
     background-color: rgb(213,225,239);
+    padding: 16px;
+    text-align: center;
 }
 
 .container {
@@ -26,7 +28,7 @@ body {
 
 .card {
     height: 499px;
-    width: 320px;
+    max-width: 20rem;
     background-color: #FFFFFF;
     grid-column: 5 / span 4;
     padding: 16px;
@@ -38,28 +40,26 @@ img {
     width: 288px;
 }
 
-h1 {  
+h2 {  
     font-weight: bold;
-    font-size: 22px; 
+    font-size: 22px; /* font-size must be in rem not px */ 
     line-height: 120%; 
     color: rgb(31,49,79)
     width: 256px; 
     height: 52px;
-    text-align: center;
 }
 
-h2 {
+p {
     font-weight: normal;
     font-size: 15px; 
     line-height: 140%; 
     color: rgb(104,119,141);
     width: 256px; 
     height: 63px;
-    text-align: center;
     margin: auto;
 }
 
-div {
+footer {
     display: flex;
     justify-content: center;
     margin: 20px; 
