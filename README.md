@@ -5,7 +5,8 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Table of contents
 
 - [Overview](#overview)
--
+- [The task](#the-task)
+- [Approach](#approach)
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
