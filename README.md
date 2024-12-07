@@ -36,8 +36,8 @@ I designed with a Desktop-First Workflow which I learnt is atypical compared to 
 
 ## Links
 
-- Solution URL: (https://www.frontendmentor.io/solutions/responsive-qr-code-for-desktop-and-mobile-PELngEEDvJ)
-- Live Site URL: (https://i000o.github.io/fem-qr-challenge/)
+:jigsaw: Solution URL: (https://www.frontendmentor.io/solutions/responsive-qr-code-for-desktop-and-mobile-PELngEEDvJ)
+:pencil2: Live Site URL: (https://i000o.github.io/fem-qr-challenge/)
 
 ## Built with
 
