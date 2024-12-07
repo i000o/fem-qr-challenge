@@ -41,8 +41,8 @@ I designed with a Desktop-First Workflow which I learnt is atypical compared to 
 
 ## Built with
 
-:gear: Semantic HTML5 markup
-:gear: CSS Flex
+:gear: Semantic HTML5 markup  
+:gear: CSS Flex  
 :gear: Desktop-first workflow
 
 ## Lessons
@@ -53,7 +53,7 @@ I designed with a Desktop-First Workflow which I learnt is atypical compared to 
 
 ## Take forward
 
-:grey_exclamation: Do the simplest thing. Don’t overdo things and give yourself unnecessary, time-consuming work.
+:grey_exclamation: Do the simplest thing. Don’t overdo things and give yourself unnecessary, time-consuming work.  
 :grey_exclamation: Your design-eye comes in handy here… You notice things that others don’t.
 
 ## Feedback
